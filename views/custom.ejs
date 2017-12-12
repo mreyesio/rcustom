@@ -1,0 +1,28 @@
+<% include partials/header%>
+<!---->
+
+<ol class="breadcrumb">
+  <li><a href="/">Main</a></li>
+  <li class="active"><%=db_count%></li>
+</ol>
+
+    <div class="row">
+      
+        <% for(var i=1; i< db_count+1; i++){%>
+        <div class="col-lg-6 col-md-12 col-sm-16">
+        <%var thumbnail_code= ("000" + (i)).slice(-3);  %>
+        <%var thumbnail_code= "/rc_"+thumbnail_code;  %>
+        <%var thumbnail_code_link=thumbnail_code+"/"+thumbnail_code+"_1.jpg"; %>
+         <%var thumbnail_code= "/custom"+thumbnail_code;  %>
+        <% console.log(thumbnail_code_link); %>    
+        <div class="thumbnail">
+          <a href="<%=thumbnail_code%>">
+          <img class="rowsize" src="<%=thumbnail_code_link%>" >
+          </a>
+        </div>
+        </div>
+       <% } %>
+      
+
+    </div>
+<% include partials/footer%>
