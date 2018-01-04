@@ -1,4 +1,4 @@
-// zillow api key X1-ZWz18vgk6gjh1n_6zfs6
+// zillow api key-----------------------
 
 // initlize packages
 var express = require("express");
